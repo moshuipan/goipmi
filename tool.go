@@ -79,6 +79,9 @@ func (t *tool) options() []string {
 	if t.Port != 0 {
 		options = append(options, "-p", strconv.Itoa(t.Port))
 	}
+	if t.Role != "" {
+		options = append(options, "-L", t.Role)
+	}
 
 	return options
 }
